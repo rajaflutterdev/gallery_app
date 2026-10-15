@@ -145,21 +145,24 @@ class _ImageDetailScreenState extends State<ImageDetailScreen> {
             style: const TextStyle(fontSize: 16),
           ),
           const SizedBox(height: 24),
-          SizedBox(
-            height: 52,
-            child: FilledButton.icon(
-              onPressed: downloadingImage ? null : downloadImage,
-              icon: downloadingImage
-                  ? const SizedBox(
-                      width: 18,
-                      height: 18,
-                      child: CircularProgressIndicator(strokeWidth: 2,color:  Color(0xfff84b81)),
-                    )
-                  : const Icon(Icons.download_rounded),
-              label: Text(downloadingImage ? saveImg : downloadImg),
-            ),
-          ),
         ],
+      ),
+      bottomNavigationBar:  Padding(
+        padding: const EdgeInsets.all(10),
+        child: SizedBox(
+          height: 52,
+          child: FilledButton.icon(
+            onPressed: downloadingImage ? null : downloadImage,
+            icon: downloadingImage
+                ? const SizedBox(
+              width: 18,
+              height: 18,
+              child: CircularProgressIndicator(strokeWidth: 2,color:  Color(0xfff84b81)),
+            )
+                : const Icon(Icons.download_rounded),
+            label: Text(downloadingImage ? saveImg : downloadImg),
+          ),
+        ),
       ),
     );
   }
