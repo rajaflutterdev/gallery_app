@@ -41,8 +41,6 @@ lib/
 |         └── presentation
 |   └── splash
 |        └── splash.dart
-├── services/
-│   └── unsplash_service.dart
 └── screens/
     └── image_search_screen.dart
 ```
